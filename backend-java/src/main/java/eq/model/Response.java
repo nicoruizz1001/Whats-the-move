@@ -4,6 +4,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.EnumType;
 
 import java.time.Instant;
 
@@ -20,8 +22,10 @@ public class Response {
     @Column(nullable = false)
     private String activityType;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Budget budget;
+
 
     @Column
     private Integer radiusMiles;

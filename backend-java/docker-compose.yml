@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: eq_postgres
+    environment:
+      POSTGRES_DB: eq
+      POSTGRES_USER: eq
+      POSTGRES_PASSWORD: eq
+    ports:
+      - "5432:5432"
+    volumes:
+      - eq_pgdata:/var/lib/postgresql/data
+
+volumes:
+  eq_pgdata:
